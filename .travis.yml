@@ -4,7 +4,7 @@ language: java
 
 # JDK versios support
 jdk:
-  - oraclejdk8
+  - openjdk8
 
 # run tests, findbugs, pmd and friends using Ant, Maven or Gradle
 script: mvn clean package
