@@ -15,7 +15,7 @@ public abstract class AbstractAccount {
 
 	public void credit(double amount) throws NegativeAmountException {
 		if (amount > 0) {
-			this.balance -= amount;
+			this.balance += amount;
 		} else {
 			throw new NegativeAmountException(amount);
 		}

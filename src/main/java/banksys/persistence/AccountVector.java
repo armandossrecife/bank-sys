@@ -16,7 +16,6 @@ public class AccountVector implements IAccountRepository {
 		this.accounts = new Vector<AbstractAccount>();
 	}
 
-	@Override
 	public void delete(String number) throws AccountDeletionException {
 		AbstractAccount account = this.findAccount(number);
 		if (account != null) {
@@ -26,7 +25,6 @@ public class AccountVector implements IAccountRepository {
 		}
 	}
 
-	@Override
 	public void create(AbstractAccount account) throws AccountCreationException {
 		if (this.findAccount(account.getNumber()) == null) {
 			this.accounts.addElement(account);
@@ -35,7 +33,6 @@ public class AccountVector implements IAccountRepository {
 		}
 	}
 
-	@Override
 	public AbstractAccount retrieve(String number) throws AccountNotFoundException {
 		AbstractAccount account = findAccount(number);
 		if (account != null) {
@@ -45,12 +42,10 @@ public class AccountVector implements IAccountRepository {
 		}
 	}
 
-	@Override
 	public int mumberOfAccounts() {
 		return this.accounts.size();
 	}
 
-	@Override
 	public AbstractAccount[] list() {
 		AbstractAccount[] list = null;
 		if (this.accounts.size() > 0) {
@@ -62,7 +57,6 @@ public class AccountVector implements IAccountRepository {
 		return list;
 	}
 
-	@Override
 	public void flush() throws FlushException {
 	}
 

@@ -34,7 +34,6 @@ public class AccountXStream implements IAccountRepository {
 		}
 	}
 
-	@Override
 	public void delete(String number) throws AccountDeletionException {
 		AbstractAccount account = this.findAccount(number);
 		if (account != null) {
@@ -114,7 +113,6 @@ public class AccountXStream implements IAccountRepository {
 		xstream.toXML(accounts, new FileWriter(ACCOUNT_DB_XML_NAME));
 	}
 
-	@Override
 	public void flush() throws FlushException {
 		try {
 			saveData();
