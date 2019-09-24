@@ -71,24 +71,6 @@
 					</execution>
 				</executions>
 			</plugin>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-pmd-plugin</artifactId>
-				<version>3.10.0</version>
-				<executions>
-					<execution>
-						<goals>
-							<goal>check</goal>
-							<goal>cpd-check</goal>
-						</goals>
-					</execution>
-				</executions>
-				<configuration>
-					<rulesets>
-						<ruleset>/Users/lincolnrocha/Documents/tpii-2018-workspace/bank-sys/rules.xml</ruleset>
-					</rulesets>
-				</configuration>
-			</plugin>
 		</plugins>
 	</build>
 	<reporting>
